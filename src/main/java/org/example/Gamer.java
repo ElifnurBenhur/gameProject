@@ -3,55 +3,51 @@ package org.example;
 import java.util.Date;
 
 public class Gamer extends User{
-    private String nationalityId;
-    private  String firstName;
-    private  String lastName;
-    private Date birthDate;
+
+    private int id;
+    private String password;
+    private String userName;
+
     private Game[] games;
 
-    public Gamer(int userID, String password, String username, boolean isDeleted, String nationalityId, String firstName, String lastName, Date birthDate, Game[] games) {
-        super(userID, password, username, isDeleted);
-        this.nationalityId = nationalityId;
-        this.firstName = firstName;
-        this.lastName = lastName;
-        this.birthDate = birthDate;
+
+    public Gamer(String nationalityId, String firstName, String lastName, Date birthDate, int id, String password, String userName, Game[] games) {
+        super(nationalityId, firstName, lastName, birthDate);
+        this.id = id;
+        this.password = password;
+        this.userName = userName;
         this.games = games;
     }
 
     public Gamer() {
     }
 
-    public String getNationalityId() {
-        return nationalityId;
+
+    public int getId() {
+        return id;
     }
 
-    public void setNationalityId(String nationalityId) {
-        this.nationalityId = nationalityId;
+    public void setId(int id) {
+        this.id = id;
     }
 
-    public String getFirstName() {
-        return firstName;
+    public String getPassword() {
+        return password;
     }
 
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
+    public void setPassword(String password) {
+        this.password = password;
     }
 
-    public String getLastName() {
-        return lastName;
+    public String getUserName() {
+        return userName;
     }
 
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
+    public void setUserName(String userName) {
+        this.userName = userName;
     }
 
-    public Date getBirthDate() {
-        return birthDate;
-    }
 
-    public void setBirthDate(Date birthDate) {
-        this.birthDate = birthDate;
-    }
 
     public Game[] getGames() {
         return games;

@@ -1,22 +1,22 @@
 package org.example;
 
 import java.util.Date;
-
+import java.util.List;
 public class Campaign {
    private int id;
     private int discountPercentage;
     private String description;
-    private Buyable[] buyables;
+    private List<Game> games;
     private Date startDate;
     private Date endDate;
 
     private  boolean isDeleted;
 
- public Campaign(int id, int discountPercentage, String description, Buyable[] buyables, Date startDate, Date endDate, boolean isDeleted) {
+ public Campaign(int id, int discountPercentage, String description, List<Game> games, Date startDate, Date endDate, boolean isDeleted) {
   this.id = id;
   this.discountPercentage = discountPercentage;
   this.description = description;
-  this.buyables = buyables;
+  this.games = games;
   this.startDate = startDate;
   this.endDate = endDate;
   this.isDeleted = isDeleted;
@@ -48,12 +48,12 @@ public class Campaign {
   this.description = description;
  }
 
- public Buyable[] getBuyables() {
-  return buyables;
+ public List<Game> getGames() {
+  return games;
  }
 
- public void setBuyables(Buyable[] buyables) {
-  this.buyables = buyables;
+ public void setGames(List<Game> games) {
+  this.games = games;
  }
 
  public Date getStartDate() {

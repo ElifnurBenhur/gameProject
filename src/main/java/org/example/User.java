@@ -1,43 +1,25 @@
 package org.example;
 
-public class User {
-    private int id;
-    private String password;
-    private String userName;
-    private  boolean isDeleted;
+import java.util.Date;
 
-    public User(int id, String password, String userName, boolean isDeleted) {
-        this.id = id;
-        this.password = password;
-        this.userName = userName;
-        this.isDeleted = isDeleted;
+public class User {
+    private String nationalityId;
+    private  String firstName;
+    private  String lastName;
+    private Date birthDate;
+    private boolean isDeleted;
+
+
+    public User(String nationalityId, String firstName, String lastName, Date birthDate) {
+        this.nationalityId = nationalityId;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.birthDate = birthDate;
+        this.isDeleted=false;
     }
+
     public User(){
 
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
-    public String getUserName() {
-        return userName;
-    }
-
-    public void setUserName(String userName) {
-        this.userName = userName;
     }
 
     public boolean isDeleted() {
@@ -46,5 +28,37 @@ public class User {
 
     public void setDeleted(boolean deleted) {
         isDeleted = deleted;
+    }
+
+    public String getNationalityId() {
+        return nationalityId;
+    }
+
+    public void setNationalityId(String nationalityId) {
+        this.nationalityId = nationalityId;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public Date getBirthDate() {
+        return birthDate;
+    }
+
+    public void setBirthDate(Date birthDate) {
+        this.birthDate = birthDate;
     }
 }

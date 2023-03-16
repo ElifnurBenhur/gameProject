@@ -1,22 +1,26 @@
 package org.example;
 
 import java.util.Date;
+import java.util.List;
 
 public class Order {
     private int id;
     private Date date;
-    private Buyable[] buyables;
+    private List<Game> games;
     private  Gamer gamer;
-    private double totalCost;
+    private double totalCost=0;
     private  boolean isDeleted;
 
-    public Order(int id, Date date, Buyable[] buyables, Gamer gamer, double totalCost, boolean isDeleted) {
+    public Order(int id, Date date, List<Game> games, Gamer gamer, boolean isDeleted) {
         this.id = id;
         this.date = date;
-        this.buyables = buyables;
+        this.games = games;
         this.gamer = gamer;
-        this.totalCost = totalCost;
         this.isDeleted = isDeleted;
+        for (Game game:games
+             ) {
+            this.totalCost+=game.getPrice();
+        }
     }
     public Order(){
 
@@ -38,12 +42,12 @@ public class Order {
         this.date = date;
     }
 
-    public Buyable[] getBuyables() {
-        return buyables;
+    public List<Game> getGames() {
+        return games;
     }
 
-    public void setBuyables(Buyable[] buyables) {
-        this.buyables = buyables;
+    public void setGames(List<Game> games) {
+        this.games = games;
     }
 
     public Gamer getGamer() {

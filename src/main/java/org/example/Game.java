@@ -1,6 +1,6 @@
 package org.example;
 
-public class Game implements  Buyable{
+public class Game {
     private int id;
     private String name;
     private double price;
